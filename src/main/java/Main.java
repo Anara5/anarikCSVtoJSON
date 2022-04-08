@@ -41,7 +41,7 @@ public class Main {
     }
 
     // method to create a JSON file and write data there
-    private static String listToJson(List<Employee> list, String tojson) {
+    private static void listToJson(List<Employee> list, String tojson) {
         try (Writer file = new FileWriter(tojson, true)) {
             Gson gson = new GsonBuilder()
                     .setPrettyPrinting()
@@ -51,6 +51,5 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
     }
 }
